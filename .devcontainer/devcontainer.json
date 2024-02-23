@@ -1,0 +1,22 @@
+{
+    "name": "Vue3 Dev Container Template",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "workspace",
+	"workspaceFolder": "/app",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mhutchie.git-graph",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"PKief.material-icon-theme",
+				"vue.volar",
+				"vue.vscode-typescript-vue-plugin",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	}
+}

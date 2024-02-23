@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  workspace:
+    image: node:20-alpine3.18
+    environment:
+      - TZ=${TIME_ZONE-UTC}
+    tty: true
+    stdin_open: true
+    command: >
+      /bin/sh -c "
+      echo 'Installing packages...';
+      apk add --no-cache git;
+      echo 'Packages installed. Starting the main process...';
+      exec node;
+      "    
+    volumes:
+      - ../:/app
+    working_dir: /app
